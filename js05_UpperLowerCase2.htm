@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js05_upperLowercase2.htm - conversão de strings</title>
+<meta http-equiv="Content-Type" content="text/html"; charset=iso-8859-1>
+<meta http-equiv="Content-Type" content="text/html"; charset=utf-8>
+<meta charset="utf-8"/>
+</head>
+<body>
+    <h3>Formulário de consulta de curso</h3>
+
+    <form name="formcurso" action="" method="post">
+        Digite seu curso :<input type="text" name="f_cursodig" size="8" maxlength="4"/>(sist)<p></p>
+        <input type="button" name="btn_validar" value="Validar" onclick="cadCurso()"/>
+        <input type="reset" name="btn_cancela" value="Cancelar"/>
+    Código do curso:<input text="text" name="f_codcurso" size="15" maxlenght="10"/>
+    </form>
+
+    <script language="JavaScript">
+        var js_cursodig;
+
+        function cadCurso(){
+            js_cursodig= document.formcurso.f_cursodig.value;
+           
+            if(js_cursodig.toLowerCase()=='sist'){
+                document.formcurso.f_codcurso.value='sist001/FB';
+            } else{
+                window.alert('CURSO INVÁLIDO')
+            }
+
+          
+        }
+        </script>
+
+    </body>
+    </html>
